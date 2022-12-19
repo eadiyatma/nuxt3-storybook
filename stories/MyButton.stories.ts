@@ -20,3 +20,14 @@ export const Secondary: StoryFn<typeof MyButton> = () => ({
   components: { MyButton },
   template: '<MyButton background="#ff0" label="😄👍😍💯" />',
 });
+
+const Template: StoryFn<typeof MyButton> = (args) => ({
+  components: { MyButton },
+  setup() {
+    return { args };
+  },
+  template: '<MyButton v-bind="args" />',
+});
+
+export const Tertiary = Template.bind({});
+Tertiary.args = { label: "📚📕📈🤓" };
