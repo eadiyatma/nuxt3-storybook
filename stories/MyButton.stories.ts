@@ -1,4 +1,5 @@
 import MyButton from "../components/MyButton.vue";
+// import MybuttonDocument from "./MyButtonDocument.mdx";
 
 import { Meta, StoryFn } from "@storybook/vue3";
 
@@ -9,6 +10,11 @@ export default {
    */
   title: "MyButton",
   component: MyButton,
+  // parameters: {
+  //   docs: {
+  //     page: MybuttonDocument,
+  //   },
+  // },
 } as Meta<typeof MyButton>;
 
 export const Primary: StoryFn<typeof MyButton> = () => ({
